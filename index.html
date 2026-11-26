@@ -69,12 +69,15 @@ const t0 = new Date(); t0.setHours(0,0,0,0);
 const OPEN = PREVIEW ? ALL.length : Math.max(0, Math.min(ALL.length, Math.floor((t0 - START) / 864e5) + 1));
 const DAYS = ALL.slice(0, OPEN);
 const LAST = DAYS.length - 1;
+const REAL = Math.floor((t0 - START) / 864e5);
+const NOW = Math.max(0, Math.min(LAST, REAL));
+const DAYS_LEFT = -REAL;
 const dateFor = (i) => { const x = new Date(START); x.setDate(x.getDate() + i); return x.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'}); };
 const VIEWS = [['machine','1 Machine'],['blueprint','2 Blueprint'],['person','3 Person']];
 const KEY = 'daily-machine-v1';
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
-const S = { screen:'read', from:'past', day:LAST, view:'machine', part:0, ask:null, stars:saved.stars||{}, notes:saved.notes||{} };
+const S = { screen:'read', from:'past', day:NOW, view:'machine', part:0, ask:null, stars:saved.stars||{}, notes:saved.notes||{} };
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const keep = () => { try { localStorage.setItem(KEY, JSON.stringify({stars:S.stars, notes:S.notes})); } catch (e) {} };
 const BIRD = '<svg class="bird" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#16324F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/><path d="m20 7 2 .5-2 .5"/><path d="M10 18v3"/><path d="M14 17.75V21"/></svg>';
@@ -90,22 +93,30 @@ function diagram(d) {
   return '<svg role="img" aria-label="Simple diagram of the '+esc(d.name)+'" viewBox="0 0 330 200" fill="none">' + d.svg.replace(/\{\{\s*(\w+)\s*\}\}/g, (m, k) => v[k]) + '</svg>';
 }
 function render() {
-  if (!DAYS.length) { document.getElementById('app').innerHTML = '<div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div><div class="col" style="gap:12px"><h1 class="cond" style="font-size:34px">First drawing arrives '+dateFor(0)+'</h1><div class="hook">One machine a day: the machine, the blueprint, and the person behind it</div></div><div class="tb"><div><div class="k">TITLE</div><div class="v">Coming soon</div></div><div><div class="k">DWG NO</div><div class="v">001</div></div><div><div class="k">SHEET</div><div class="v">0 of 3</div></div><div><div class="k">NEXT ISSUE</div><div class="v">'+esc(ALL[0].teaser)+'</div></div><div><div class="k">DATE</div><div class="v">'+dateFor(0)+'</div></div><div><div class="k">DRAWN FOR</div><div class="v">Chill Bill</div></div></div>'; return; }
+  if (!DAYS.length) {
+    const left = DAYS_LEFT === 1 ? 'Starts tomorrow' : 'Starts in ' + DAYS_LEFT + ' days';
+    document.getElementById('app').innerHTML = '<div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div>' +
+      '<div class="col" style="gap:10px"><div class="mono kick">'+left+', '+dateFor(0)+'</div><h1 class="cond">A machine a day, for Chill Bill</h1><div class="hook">Thirty machines, one each morning. Some you ran, some you never met</div></div>' +
+      '<div class="col" style="gap:10px"><div class="note">How it works</div>'+tbl([['Each day','One new machine opens here, starting '+dateFor(0)],['Three sheets','The machine, the blueprint, and the person who ran it'],['Keep','Tap Save on the ones you might paint. Old ones stay under Past']])+'</div>' +
+      '<div class="col" style="gap:10px"><div class="note">Want a nudge each morning?</div><div>Add a 7 am reminder to your phone calendar. It gives a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>' +
+      '<div class="tb">'+[['TITLE','Coming up first'],['DWG NO','001'],['SHEET','0 of 3'],['FIRST ISSUE',ALL[0].teaser],['DATE',dateFor(0).replace(/^\w+, /,'')],['DRAWN FOR','Chill Bill']].map((c)=>'<div><div class="k">'+c[0]+'</div><div class="v">'+esc(c[1])+'</div></div>').join('')+'</div>';
+    return; }
   const d = DAYS[S.day], savedIdx = DAYS.map((x,i)=>i).filter((i)=>S.stars[DAYS[i].id]);
   const n = savedIdx.length;
-  let h = '<div class="col" style="gap:12px"><div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div>' +
-    seg([['tab:today','Today',S.screen==='read'&&S.day===LAST],['tab:past','Past',S.screen==='past'],['tab:saved','Saved '+(n<10?'0':'')+n,S.screen==='saved']]) + '</div>';
+  let h = (PREVIEW ? '<div class="note">Preview: all '+ALL.length+' unlocked. He gets one a day</div>' : '') + '<div class="col" style="gap:12px"><div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div>' +
+    seg([['tab:today','Today',S.screen==='read'&&S.day===NOW],['tab:past','Past',S.screen==='past'],['tab:saved','Saved '+(n<10?'0':'')+n,S.screen==='saved']]) + '</div>';
   if (S.screen !== 'read') {
     const isSaved = S.screen === 'saved';
     const idx = (isSaved ? savedIdx : DAYS.map((x,i)=>i)).slice().reverse();
     h += '<div class="col" style="gap:12px"><h2 class="cond" style="font-size:30px">'+(isSaved?'Your saved machines':'Past machines')+'</h2><div>'+(isSaved?(n?'Tap one to read it again':'Nothing saved yet. Tap Save on any machine and it lands here'):'Newest first. Tap one to read it')+'</div>';
+    if (!isSaved) h += '<a class="btn" href="daily-machine.ics" style="background:var(--p);color:var(--n);border:2px solid var(--n)">Add daily reminders</a>';
     idx.forEach((i) => { const x = DAYS[i], st = !!S.stars[x.id], nt = S.notes[x.id];
       h += '<button class="row" data-act="open:'+i+'" aria-label="Open '+esc(x.name)+'"><img src="'+x.imgMachine+'" alt=""><span class="col" style="flex:1;min-width:0;gap:2px"><span class="mono kick">'+no(i)+'</span><span class="cond" style="font-size:18px;line-height:1.1">'+esc(x.name)+'</span><span style="font-size:13px;line-height:1.35">'+esc(isSaved&&nt?'Your note: '+nt:x.hook)+'</span></span>'+STAR(st?'#16324F':'none',st?'#16324F':'#9AA6B2')+ARROW('#16324F')+'</button>'; });
     h += '</div>';
   } else {
     const st = !!S.stars[d.id], vi = VIEWS.findIndex((v)=>v[0]===S.view), hasNext = S.day < LAST;
-    if (S.day !== LAST) h += '<button data-act="back" style="align-self:flex-start;display:flex;align-items:center;gap:6px;font-size:12px"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#16324F" stroke-width="2" stroke-linecap="square"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'+(S.from==='saved'?'Saved':'Past machines')+'</button>';
-    h += '<div class="col" style="gap:8px"><div class="mono kick">'+(S.day===LAST?'Today, ':'')+no(S.day)+'</div><h1 class="cond">'+esc(d.name)+'</h1><div class="mono" style="font-size:12px;color:var(--g)">'+esc(d.sub)+'</div><div class="hook">'+esc(d.hook)+'</div></div>';
+    if (S.day !== NOW) h += '<button data-act="back" style="align-self:flex-start;display:flex;align-items:center;gap:6px;font-size:12px"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#16324F" stroke-width="2" stroke-linecap="square"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'+(S.from==='saved'?'Saved':'Past machines')+'</button>';
+    h += '<div class="col" style="gap:8px"><div class="mono kick">'+(S.day===NOW&&REAL>=0?'Today, ':'')+no(S.day)+'</div><h1 class="cond">'+esc(d.name)+'</h1><div class="mono" style="font-size:12px;color:var(--g)">'+esc(d.sub)+'</div><div class="hook">'+esc(d.hook)+'</div></div>';
     h += '<div class="col" style="gap:8px"><button data-act="star" class="'+(st?'fill':'')+'" style="align-self:flex-start;display:flex;align-items:center;gap:8px">'+STAR(st?'#F7F5EE':'none',st?'#F7F5EE':'#16324F')+(st?'Saved':'Save for later')+'</button>' +
       (st ? '<div class="col" style="gap:4px"><label for="why" class="mono" style="font-size:12px;color:var(--g)">WHY THIS ONE? JOT A NOTE IF YOU LIKE</label><input id="why" type="text" placeholder="Type here" value="'+esc(S.notes[d.id]||'')+'"></div>' : '') + '</div>';
     h += seg(VIEWS.map((v) => ['view:'+v[0], v[1], v[0]===S.view]));
@@ -134,7 +145,7 @@ function render() {
 document.getElementById('app').addEventListener('click', (e) => {
   const b = e.target.closest('[data-act]'); if (!b) return;
   const [act, arg] = b.dataset.act.split(':'); let top = false;
-  if (act === 'tab') { if (arg === 'today') { Object.assign(S,{screen:'read',day:LAST,view:'machine',part:0,ask:null}); } else S.screen = arg; top = true; }
+  if (act === 'tab') { if (arg === 'today') { Object.assign(S,{screen:'read',day:NOW,view:'machine',part:0,ask:null}); } else S.screen = arg; top = true; }
   else if (act === 'open') { Object.assign(S,{from:S.screen==='read'?S.from:S.screen,screen:'read',day:+arg,view:'machine',part:0,ask:null}); top = true; }
   else if (act === 'back') { S.screen = S.from; top = true; }
   else if (act === 'star') { S.stars[DAYS[S.day].id] = !S.stars[DAYS[S.day].id]; keep(); }
