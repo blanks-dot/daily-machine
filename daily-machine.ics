@@ -14,421 +14,451 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:daily-machine-001@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261127T070000
-DTEND;TZID=America/Chicago:20261127T071500
-SUMMARY:The Daily Machine No. 1
-DESCRIPTION:Today: a 3\,400-ton bridge leaf lifted by a small motor. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261127T100000
+DTEND;TZID=America/Chicago:20261127T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 1. Hint: a 3\,400-ton bridge leaf lifted by a small motor. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a 3\,400-ton bridge leaf lifted by a small motor
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-002@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261128T070000
-DTEND;TZID=America/Chicago:20261128T071500
-SUMMARY:The Daily Machine No. 2
-DESCRIPTION:Today: a 264 foot wheel built through a frozen winter to answer the Eiffel Tower. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261128T100000
+DTEND;TZID=America/Chicago:20261128T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 2. Hint: a 264 foot wheel built through a frozen winter to answer the Eiffel Tower. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a 264 foot wheel built through a frozen winter to answer the Eiffel Tower
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-003@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261129T070000
-DTEND;TZID=America/Chicago:20261129T071500
-SUMMARY:The Daily Machine No. 3
-DESCRIPTION:Today: a steel train that ran 1\,015 miles without stopping. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261129T100000
+DTEND;TZID=America/Chicago:20261129T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 3. Hint: a steel train that ran 1\,015 miles without stopping. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a steel train that ran 1\,015 miles without stopping
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-004@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261130T070000
-DTEND;TZID=America/Chicago:20261130T071500
-SUMMARY:The Daily Machine No. 4
-DESCRIPTION:Today: a Chicago flop from the 1893 fair that half the world now wears. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261130T100000
+DTEND;TZID=America/Chicago:20261130T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 4. Hint: a Chicago flop from the 1893 fair that half the world now wears. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a Chicago flop from the 1893 fair that half the world now wears
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-005@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261201T070000
-DTEND;TZID=America/Chicago:20261201T071500
-SUMMARY:The Daily Machine No. 5
-DESCRIPTION:Today: a machine that casts a whole line of type in hot metal. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261201T100000
+DTEND;TZID=America/Chicago:20261201T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 5. Hint: a machine that casts a whole line of type in hot metal. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a machine that casts a whole line of type in hot metal
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-006@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261202T070000
-DTEND;TZID=America/Chicago:20261202T071500
-SUMMARY:The Daily Machine No. 6
-DESCRIPTION:Today: a horse-drawn machine that London mocked\, then gave its top prize. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261202T100000
+DTEND;TZID=America/Chicago:20261202T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 6. Hint: a horse-drawn machine that London mocked\, then gave its top prize. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a horse-drawn machine that London mocked\, then gave its top prize
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-007@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261203T070000
-DTEND;TZID=America/Chicago:20261203T071500
-SUMMARY:The Daily Machine No. 7
-DESCRIPTION:Today: a U-boat the US Navy captured and towed home. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261203T100000
+DTEND;TZID=America/Chicago:20261203T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 7. Hint: a U-boat the US Navy captured and towed home. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a U-boat the US Navy captured and towed home
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-008@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261204T070000
-DTEND;TZID=America/Chicago:20261204T071500
-SUMMARY:The Daily Machine No. 8
-DESCRIPTION:Today: a Chicago camera that held every frame on steel pins and took over Hollywood. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261204T100000
+DTEND;TZID=America/Chicago:20261204T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 8. Hint: a Chicago camera that held every frame on steel pins and took over Hollywood. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a Chicago camera that held every frame on steel pins and took over Hollywood
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-009@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261205T070000
-DTEND;TZID=America/Chicago:20261205T071500
-SUMMARY:The Daily Machine No. 9
-DESCRIPTION:Today: a loom that took its orders from holes punched in cards. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261205T100000
+DTEND;TZID=America/Chicago:20261205T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 9. Hint: a loom that took its orders from holes punched in cards. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a loom that took its orders from holes punched in cards
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-010@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261206T070000
-DTEND;TZID=America/Chicago:20261206T071500
-SUMMARY:The Daily Machine No. 10
-DESCRIPTION:Today: a car pulled up hills by a cable you can't see. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261206T100000
+DTEND;TZID=America/Chicago:20261206T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 10. Hint: a car pulled up hills by a cable you can't see. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a car pulled up hills by a cable you can't see
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-011@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261207T070000
-DTEND;TZID=America/Chicago:20261207T071500
-SUMMARY:The Daily Machine No. 11
-DESCRIPTION:Today: a railroad car that hides its beds up in the ceiling by day. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261207T100000
+DTEND;TZID=America/Chicago:20261207T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 11. Hint: a railroad car that hides its beds up in the ceiling by day. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a railroad car that hides its beds up in the ceiling by day
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-012@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261208T070000
-DTEND;TZID=America/Chicago:20261208T071500
-SUMMARY:The Daily Machine No. 12
-DESCRIPTION:Today: a woodshed machine from Illinois that washed 240 dishes in two minutes. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261208T100000
+DTEND;TZID=America/Chicago:20261208T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 12. Hint: a woodshed machine from Illinois that washed 240 dishes in two minutes. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a woodshed machine from Illinois that washed 240 dishes in two minutes
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-013@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261209T070000
-DTEND;TZID=America/Chicago:20261209T071500
-SUMMARY:The Daily Machine No. 13
-DESCRIPTION:Today: a steam engine that ran a world's fair\, then a Chicago factory. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261209T100000
+DTEND;TZID=America/Chicago:20261209T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 13. Hint: a steam engine that ran a world's fair\, then a Chicago factory. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a steam engine that ran a world's fair\, then a Chicago factory
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-014@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261210T070000
-DTEND;TZID=America/Chicago:20261210T071500
-SUMMARY:The Daily Machine No. 14
-DESCRIPTION:Today: a Chicago game that was banned in its own city for 30 years. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261210T100000
+DTEND;TZID=America/Chicago:20261210T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 14. Hint: a Chicago game that was banned in its own city for 30 years. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a Chicago game that was banned in its own city for 30 years
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-015@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261211T070000
-DTEND;TZID=America/Chicago:20261211T071500
-SUMMARY:The Daily Machine No. 15
-DESCRIPTION:Today: a brake that only wakes up when everything else has failed. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261211T100000
+DTEND;TZID=America/Chicago:20261211T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 15. Hint: a brake that only wakes up when everything else has failed. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a brake that only wakes up when everything else has failed
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-016@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261212T070000
-DTEND;TZID=America/Chicago:20261212T071500
-SUMMARY:The Daily Machine No. 16
-DESCRIPTION:Today: a steam engine with seven foot wheels and a speed record nobody can prove. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261212T100000
+DTEND;TZID=America/Chicago:20261212T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 16. Hint: a steam engine with seven foot wheels and a speed record nobody can prove. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a steam engine with seven foot wheels and a speed record nobody can prove
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-017@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261213T070000
-DTEND;TZID=America/Chicago:20261213T071500
-SUMMARY:The Daily Machine No. 17
-DESCRIPTION:Today: a machine a sometime actor built in eleven days\, then sold on installments. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261213T100000
+DTEND;TZID=America/Chicago:20261213T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 17. Hint: a machine a sometime actor built in eleven days\, then sold on installments. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a machine a sometime actor built in eleven days\, then sold on installments
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-018@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261214T070000
-DTEND;TZID=America/Chicago:20261214T071500
-SUMMARY:The Daily Machine No. 18
-DESCRIPTION:Today: a boiler on rails that took a hill apart five yards at a time. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261214T100000
+DTEND;TZID=America/Chicago:20261214T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 18. Hint: a boiler on rails that took a hill apart five yards at a time. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a boiler on rails that took a hill apart five yards at a time
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-019@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261215T070000
-DTEND;TZID=America/Chicago:20261215T071500
-SUMMARY:The Daily Machine No. 19
-DESCRIPTION:Today: an undertaker's revenge machine that put telephone operators out of work. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261215T100000
+DTEND;TZID=America/Chicago:20261215T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 19. Hint: an undertaker's revenge machine that put telephone operators out of work. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: an undertaker's revenge machine that put telephone operators out of work
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-020@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261216T070000
-DTEND;TZID=America/Chicago:20261216T071500
-SUMMARY:The Daily Machine No. 20
-DESCRIPTION:Today: a wooden rail car from the first train with a motor in every car. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261216T100000
+DTEND;TZID=America/Chicago:20261216T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 20. Hint: a wooden rail car from the first train with a motor in every car. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a wooden rail car from the first train with a motor in every car
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-021@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261217T070000
-DTEND;TZID=America/Chicago:20261217T071500
-SUMMARY:The Daily Machine No. 21
-DESCRIPTION:Today: a writing machine that gunmakers dressed up like a sewing machine. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261217T100000
+DTEND;TZID=America/Chicago:20261217T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 21. Hint: a writing machine that gunmakers dressed up like a sewing machine. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a writing machine that gunmakers dressed up like a sewing machine
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-022@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261218T070000
-DTEND;TZID=America/Chicago:20261218T071500
-SUMMARY:The Daily Machine No. 22
-DESCRIPTION:Today: a machine steered by sliding your hips\, powered by an engine built in six weeks. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261218T100000
+DTEND;TZID=America/Chicago:20261218T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 22. Hint: a machine steered by sliding your hips\, powered by an engine built in six weeks. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a machine steered by sliding your hips\, powered by an engine built in six weeks
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-023@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261219T070000
-DTEND;TZID=America/Chicago:20261219T071500
-SUMMARY:The Daily Machine No. 23
-DESCRIPTION:Today: a blacksmith's blade that let sticky prairie soil slide right off. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261219T100000
+DTEND;TZID=America/Chicago:20261219T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 23. Hint: a blacksmith's blade that let sticky prairie soil slide right off. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a blacksmith's blade that let sticky prairie soil slide right off
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-024@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261220T070000
-DTEND;TZID=America/Chicago:20261220T071500
-SUMMARY:The Daily Machine No. 24
-DESCRIPTION:Today: a Chicago adding machine first built from a macaroni box and meat skewers. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261220T100000
+DTEND;TZID=America/Chicago:20261220T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 24. Hint: a Chicago adding machine first built from a macaroni box and meat skewers. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a Chicago adding machine first built from a macaroni box and meat skewers
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-025@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261221T070000
-DTEND;TZID=America/Chicago:20261221T071500
-SUMMARY:The Daily Machine No. 25
-DESCRIPTION:Today: a Chicago machine that stood 50 records on edge and played both sides. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261221T100000
+DTEND;TZID=America/Chicago:20261221T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 25. Hint: a Chicago machine that stood 50 records on edge and played both sides. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a Chicago machine that stood 50 records on edge and played both sides
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-026@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261222T070000
-DTEND;TZID=America/Chicago:20261222T071500
-SUMMARY:The Daily Machine No. 26
-DESCRIPTION:Today: a hundred ton instrument that floats on mercury and showed the universe is growing. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261222T100000
+DTEND;TZID=America/Chicago:20261222T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 26. Hint: a hundred ton instrument that floats on mercury and showed the universe is growing. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a hundred ton instrument that floats on mercury and showed the universe is growing
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-027@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261223T070000
-DTEND;TZID=America/Chicago:20261223T071500
-SUMMARY:The Daily Machine No. 27
-DESCRIPTION:Today: a hand cranked box that made cotton king\, and slavery far bigger. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261223T100000
+DTEND;TZID=America/Chicago:20261223T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 27. Hint: a hand cranked box that made cotton king\, and slavery far bigger. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a hand cranked box that made cotton king\, and slavery far bigger
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-028@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261224T070000
-DTEND;TZID=America/Chicago:20261224T071500
-SUMMARY:The Daily Machine No. 28
-DESCRIPTION:Today: a cone that hit the air at 24\,696 mph and kept three men at room temperature. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261224T100000
+DTEND;TZID=America/Chicago:20261224T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 28. Hint: a cone that hit the air at 24\,696 mph and kept three men at room temperature. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a cone that hit the air at 24\,696 mph and kept three men at room temperature
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-029@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261225T070000
-DTEND;TZID=America/Chicago:20261225T071500
-SUMMARY:The Daily Machine No. 29
-DESCRIPTION:Today: a machine so big its factory was still going up around it. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261225T100000
+DTEND;TZID=America/Chicago:20261225T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 29. Hint: a machine so big its factory was still going up around it. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a machine so big its factory was still going up around it
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:daily-machine-030@blanks-dot.github.io
-DTSTAMP:20261125T000000Z
-DTSTART;TZID=America/Chicago:20261226T070000
-DTEND;TZID=America/Chicago:20261226T071500
-SUMMARY:The Daily Machine No. 30
-DESCRIPTION:Today: a giant pot that turns iron into steel with nothing but air. Open https://blanks-dot.github.io/daily-machine/
+DTSTAMP:20261127T220000Z
+SEQUENCE:1
+DTSTART;TZID=America/Chicago:20261226T100000
+DTEND;TZID=America/Chicago:20261226T101500
+SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
+DESCRIPTION:Machine No. 30. Hint: a giant pot that turns iron into steel with nothing but air. Open https://blanks-dot.github.io/daily-machine/
 URL:https://blanks-dot.github.io/daily-machine/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Today's machine: a giant pot that turns iron into steel with nothing but air
+DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day
 TRIGGER:PT0M
 END:VALARM
 END:VEVENT

@@ -98,7 +98,7 @@ function render() {
     document.getElementById('app').innerHTML = '<div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div>' +
       '<div class="col" style="gap:10px"><div class="mono kick">'+left+', '+dateFor(0)+'</div><h1 class="cond">A machine a day, for Chill Bill</h1><div class="hook">Thirty machines, one each morning. Some you ran, some you never met</div></div>' +
       '<div class="col" style="gap:10px"><div class="note">How it works</div>'+tbl([['Each day','One new machine opens here, starting '+dateFor(0)],['Three sheets','The machine, the blueprint, and the person who ran it'],['Keep','Tap Save on the ones you might paint. Old ones stay under Past']])+'</div>' +
-      '<div class="col" style="gap:10px"><div class="note">Want a nudge each morning?</div><div>Add a 7 am reminder to your phone calendar. It gives a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>' +
+      '<div class="col" style="gap:10px"><div class="note">Want a nudge each morning?</div><div>Get a 10 am good morning on your phone, with a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>' +
       '<div class="tb">'+[['TITLE','Coming up first'],['DWG NO','001'],['SHEET','0 of 3'],['FIRST ISSUE',ALL[0].teaser],['DATE',dateFor(0).replace(/^\w+, /,'')],['DRAWN FOR','Chill Bill']].map((c)=>'<div><div class="k">'+c[0]+'</div><div class="v">'+esc(c[1])+'</div></div>').join('')+'</div>';
     return; }
   const d = DAYS[S.day], savedIdx = DAYS.map((x,i)=>i).filter((i)=>S.stars[DAYS[i].id]);
