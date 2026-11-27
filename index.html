@@ -138,6 +138,7 @@ function render() {
     h += '<div class="col" style="gap:8px"><div class="note" style="margin-bottom:2px">Note 5: curious? ask</div>'+d.asks.map((a,i)=>'<button class="ask'+(S.ask===i?' on':'')+'" data-act="ask:'+i+'" aria-expanded="'+(S.ask===i)+'">'+esc(a[0])+'</button>'+(S.ask===i?'<div class="ans">'+esc(a[1])+'</div>':'')).join('')+'</div>';
     const today = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'});
     const cell = (k,v) => '<div><div class="k">'+k+'</div><div class="v">'+esc(v)+'</div></div>';
+    if (S.day===NOW) h += '<div class="col" style="gap:10px"><div class="note">Want a good morning at 10 am?</div><div>Tap once and your phone will nudge you each day with a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>';
     h += '<div class="col" style="gap:10px"><div class="tb">'+cell('TITLE',d.name)+cell('DWG NO',('00'+(S.day+1)).slice(-3))+cell('SHEET',(vi+1)+' of 3')+cell(hasNext?'NEXT ONE':'NEXT ISSUE',hasNext?DAYS[S.day+1].name+': '+DAYS[S.day+1].hook:(ALL[OPEN]?'Tomorrow: '+ALL[OPEN].teaser:'A new run of machines is on the way'))+cell('DATE',dateFor(S.day).replace(/^\w+, /,''))+cell('DRAWN FOR','Chill Bill')+'</div>'+(hasNext?'<button class="fill" data-act="open:'+(S.day+1)+'" style="align-self:flex-start">Open the next one</button>':'')+'</div>';
   }
   document.getElementById('app').innerHTML = h;
