@@ -98,7 +98,7 @@ function render() {
     document.getElementById('app').innerHTML = '<div class="top"><div class="cond name">The Daily Machine</div>'+BIRD+'</div>' +
       '<div class="col" style="gap:10px"><div class="mono kick">'+left+', '+dateFor(0)+'</div><h1 class="cond">A machine a day, for Chill Bill</h1><div class="hook">Thirty machines, one each morning. Some you ran, some you never met</div></div>' +
       '<div class="col" style="gap:10px"><div class="note">How it works</div>'+tbl([['Each day','One new machine opens here, starting '+dateFor(0)],['Three sheets','The machine, the blueprint, and the person who ran it'],['Keep','Tap Save on the ones you might paint. Old ones stay under Past']])+'</div>' +
-      '<div class="col" style="gap:10px"><div class="note">Want a nudge each morning?</div><div>Get a 10 am good morning on your phone, with a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>' +
+      '<div class="col" style="gap:10px"><div class="note">Want a nudge each morning?</div><div>Tap once and your phone will say good morning at 10 am each day</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>' +
       '<div class="tb">'+[['TITLE','Coming up first'],['DWG NO','001'],['SHEET','0 of 3'],['FIRST ISSUE',ALL[0].teaser],['DATE',dateFor(0).replace(/^\w+, /,'')],['DRAWN FOR','Chill Bill']].map((c)=>'<div><div class="k">'+c[0]+'</div><div class="v">'+esc(c[1])+'</div></div>').join('')+'</div>';
     return; }
   const d = DAYS[S.day], savedIdx = DAYS.map((x,i)=>i).filter((i)=>S.stars[DAYS[i].id]);
@@ -138,7 +138,7 @@ function render() {
     h += '<div class="col" style="gap:8px"><div class="note" style="margin-bottom:2px">Note 5: curious? ask</div>'+d.asks.map((a,i)=>'<button class="ask'+(S.ask===i?' on':'')+'" data-act="ask:'+i+'" aria-expanded="'+(S.ask===i)+'">'+esc(a[0])+'</button>'+(S.ask===i?'<div class="ans">'+esc(a[1])+'</div>':'')).join('')+'</div>';
     const today = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'});
     const cell = (k,v) => '<div><div class="k">'+k+'</div><div class="v">'+esc(v)+'</div></div>';
-    if (S.day===NOW) h += '<div class="col" style="gap:10px"><div class="note">Want a good morning at 10 am?</div><div>Tap once and your phone will nudge you each day with a hint, not the answer</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>';
+    if (S.day===NOW) h += '<div class="col" style="gap:10px"><div class="note">Want a good morning at 10 am?</div><div>Tap once and your phone will say good morning each day when a new one is in</div><a class="btn" href="daily-machine.ics">Add daily reminders</a></div>';
     h += '<div class="col" style="gap:10px"><div class="tb">'+cell('TITLE',d.name)+cell('DWG NO',('00'+(S.day+1)).slice(-3))+cell('SHEET',(vi+1)+' of 3')+cell(hasNext?'NEXT ONE':'NEXT ISSUE',hasNext?DAYS[S.day+1].name+': '+DAYS[S.day+1].hook:(ALL[OPEN]?'Tomorrow: '+ALL[OPEN].teaser:'A new run of machines is on the way'))+cell('DATE',dateFor(S.day).replace(/^\w+, /,''))+cell('DRAWN FOR','Chill Bill')+'</div>'+(hasNext?'<button class="fill" data-act="open:'+(S.day+1)+'" style="align-self:flex-start">Open the next one</button>':'')+'</div>';
   }
   document.getElementById('app').innerHTML = h;
