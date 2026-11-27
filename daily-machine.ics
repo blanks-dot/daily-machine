@@ -27,8 +27,8 @@ DTSTART;TZID=America/Chicago:20261128T100000
 DTEND;TZID=America/Chicago:20261128T101500
 RRULE:FREQ=DAILY
 SUMMARY:Good morning\, Chill Bill! Your machine of the day is in
-DESCRIPTION:Tap to see today's machine: https://blanks-dot.github.io/daily-machine/
-URL:https://blanks-dot.github.io/daily-machine/
+DESCRIPTION:Tap to see today's machine: https://blanks-dot.github.io/daily-machine/?r=83o99wjamd
+URL:https://blanks-dot.github.io/daily-machine/?r=83o99wjamd
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Good morning\, Chill Bill! Here's your machine of the day

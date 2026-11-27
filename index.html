@@ -80,6 +80,16 @@ try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {
 const S = { screen:'read', from:'past', day:NOW, view:'machine', part:0, ask:null, stars:saved.stars||{}, notes:saved.notes||{} };
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const keep = () => { try { localStorage.setItem(KEY, JSON.stringify({stars:S.stars, notes:S.notes})); } catch (e) {} };
+// Cloud sync (Supabase). Only for his private code, never in preview
+const SB = 'https://gtnpezhkfiuxjtcjtmua.supabase.co/rest/v1/rpc/', SBK = 'sb_publishable_uQeo9Ms9LHEJVYEzAX7cLQ_kIkOuJxz';
+let RDR = null;
+try { const m = location.search.match(/[?&]r=([a-z0-9]{6,20})/); if (m) localStorage.setItem('daily-machine-reader', m[1]); RDR = localStorage.getItem('daily-machine-reader'); } catch (e) {}
+const LIVE = !!RDR && !PREVIEW && typeof fetch === 'function';
+const DEV = (navigator.userAgent.match(/iPhone|iPad|Android|Macintosh|Windows/) || ['Other'])[0];
+const rpc = (fn, body) => LIVE ? fetch(SB + fn, {method:'POST', keepalive:true, headers:{'apikey':SBK, 'Content-Type':'application/json'}, body:JSON.stringify(Object.assign({p_reader:RDR}, body))}).catch(() => null) : Promise.resolve(null);
+const log = (kind, detail) => { const d = DAYS[S.day]; rpc('log_event', {p_kind:kind, p_day:d ? S.day : null, p_machine:d ? d.id : null, p_detail:detail || null, p_device:DEV}); };
+const push = (id) => rpc('set_save', {p_machine:id, p_starred:!!S.stars[id], p_note:S.notes[id] || null});
+let noteTimer = null, lastOpen = '';
 const BIRD = '<svg class="bird" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#16324F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/><path d="m20 7 2 .5-2 .5"/><path d="M10 18v3"/><path d="M14 17.75V21"/></svg>';
 const ARROW = (c) => '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="square" style="flex-shrink:0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const STAR = (fill, stroke) => '<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="'+fill+'" stroke="'+stroke+'" stroke-width="1.6" stroke-linejoin="round" style="flex-shrink:0"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
@@ -149,14 +159,24 @@ document.getElementById('app').addEventListener('click', (e) => {
   if (act === 'tab') { if (arg === 'today') { Object.assign(S,{screen:'read',day:NOW,view:'machine',part:0,ask:null}); } else S.screen = arg; top = true; }
   else if (act === 'open') { Object.assign(S,{from:S.screen==='read'?S.from:S.screen,screen:'read',day:+arg,view:'machine',part:0,ask:null}); top = true; }
   else if (act === 'back') { S.screen = S.from; top = true; }
-  else if (act === 'star') { S.stars[DAYS[S.day].id] = !S.stars[DAYS[S.day].id]; keep(); }
-  else if (act === 'view') { S.view = arg; S.part = 0; top = b.classList.contains('next'); }
+  else if (act === 'star') { const id = DAYS[S.day].id; S.stars[id] = !S.stars[id]; keep(); push(id); log(S.stars[id] ? 'star' : 'unstar'); }
+  else if (act === 'view') { S.view = arg; S.part = 0; top = b.classList.contains('next'); log('view', arg); }
   else if (act === 'part') { S.part = +arg; }
-  else if (act === 'ask') { S.ask = S.ask === +arg ? null : +arg; }
+  else if (act === 'ask') { S.ask = S.ask === +arg ? null : +arg; if (S.ask !== null) log('ask', DAYS[S.day].asks[S.ask][0]); }
   render(); if (top) window.scrollTo(0, 0);
+  if (S.screen === 'read' && lastOpen !== S.day + '') { lastOpen = S.day + ''; log('open'); }
 });
-document.getElementById('app').addEventListener('input', (e) => { if (e.target.id === 'why') { S.notes[DAYS[S.day].id] = e.target.value; keep(); } });
+document.getElementById('app').addEventListener('input', (e) => { if (e.target.id === 'why') { const id = DAYS[S.day].id; S.notes[id] = e.target.value; keep(); clearTimeout(noteTimer); noteTimer = setTimeout(() => { push(id); log('note', S.notes[id]); }, 1500); } });
+document.getElementById('app').addEventListener('click', (e) => { const a = e.target.closest('a[href]'); if (!a || !a.getAttribute) return; const h = a.getAttribute('href'); log(h.indexOf('.ics') >= 0 ? 'reminder' : (h.indexOf('artaboutmachines') >= 0 ? 'studio' : 'visit'), h); });
 render();
+if (DAYS.length && S.screen === 'read') { lastOpen = S.day + ''; log('open'); }
+if (LIVE) rpc('get_saves', {}).then((r) => r && r.ok ? r.json() : null).then((rows) => {
+  if (!Array.isArray(rows)) return;
+  const seen = {};
+  rows.forEach((x) => { seen[x.machine] = 1; if (x.starred) S.stars[x.machine] = true; else delete S.stars[x.machine]; if (x.note) S.notes[x.machine] = x.note; else delete S.notes[x.machine]; });
+  Object.keys(Object.assign({}, S.stars, S.notes)).forEach((id) => { if (!seen[id]) push(id); });
+  keep(); if (!document.getElementById('why') || document.activeElement !== document.getElementById('why')) render();
+}).catch(() => {});
 </script>
 </body>
 </html>
