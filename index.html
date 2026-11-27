@@ -84,7 +84,8 @@ const keep = () => { try { localStorage.setItem(KEY, JSON.stringify({stars:S.sta
 const SB = 'https://gtnpezhkfiuxjtcjtmua.supabase.co/rest/v1/rpc/', SBK = 'sb_publishable_uQeo9Ms9LHEJVYEzAX7cLQ_kIkOuJxz';
 let RDR = null;
 try { const m = location.search.match(/[?&]r=([a-z0-9]{6,20})/); if (m) localStorage.setItem('daily-machine-reader', m[1]); RDR = localStorage.getItem('daily-machine-reader'); } catch (e) {}
-const LIVE = !!RDR && !PREVIEW && typeof fetch === 'function';
+const SYNC_ON = false; // turn back on once the new database exists
+const LIVE = SYNC_ON && !!RDR && !PREVIEW && typeof fetch === 'function';
 const DEV = (navigator.userAgent.match(/iPhone|iPad|Android|Macintosh|Windows/) || ['Other'])[0];
 const rpc = (fn, body) => LIVE ? fetch(SB + fn, {method:'POST', keepalive:true, headers:{'apikey':SBK, 'Content-Type':'application/json'}, body:JSON.stringify(Object.assign({p_reader:RDR}, body))}).catch(() => null) : Promise.resolve(null);
 const log = (kind, detail) => { const d = DAYS[S.day]; rpc('log_event', {p_kind:kind, p_day:d ? S.day : null, p_machine:d ? d.id : null, p_detail:detail || null, p_device:DEV}); };
